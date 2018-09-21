@@ -1,6 +1,6 @@
-default_platform(:android)
+default_platform(:ios)
 
-platform :android do
+platform :ios do
   github_url = "git@github.com"
   import_from_git(url: "#{github_url}:Taki-Kun/fastlane-common.git", branch: "master", path: "fastlane/Fastfile")
   import_from_git(url: "#{github_url}:Taki-Kun/fastlane-ios.git", branch: "master", path: "fastlane/Fastfile")

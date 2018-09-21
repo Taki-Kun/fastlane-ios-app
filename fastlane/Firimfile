@@ -4,5 +4,5 @@
 
 firim_api_token "9611b6a99d280463039cbb64b7eb24ca" # The fir.im api token
 platform "ios"
-app_identifier "com.hellotalk"
+app_identifier "com.helloTalk.helloTalk"
 app_name "HelloTalk"
