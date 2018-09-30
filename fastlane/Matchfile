@@ -1,0 +1,35 @@
+git_url("git@gitlab.hellotalk.com:test-issenn/certificates.git")
+git_branch("master")
+
+# type("development") # The default type, can be: appstore, adhoc, enterprise or development
+type("adhoc")
+
+# app_identifier(["tools.fastlane.app", "tools.fastlane.app2"])
+app_identifier("com.helloTalk.helloTalk,com.helloTalk.helloTalk.NotificationServiceExt,com.helloTalk.helloTalk.NotificationContentExt,com.helloTalk.helloTalk.IntentsExtension,com.helloTalk.helloTalk.IntentsExtensionUI")
+
+# username("user@fastlane.tools") # Your Apple Developer Portal username
+username("issenn@hellotalk.com")
+
+team_id("65DX3KZRH6")
+team_name("HELLOTALK FOREIGN LANGUAGE EXCHANGE LEARNING TALK CHAT APP")
+
+# For all available options run `fastlane match --help`
+# Remove the # in the beginning of the line to enable the other options
+
+# keychain_name()
+keychain_password("mn234")
+
+readonly(true)
+
+# git_full_name("")
+# git_user_email("")
+
+verbose(true)
+
+clone_branch_directly(true)
+
+# force_for_new_devices(false)
+
+platform("ios")
+
+# template_name("")
