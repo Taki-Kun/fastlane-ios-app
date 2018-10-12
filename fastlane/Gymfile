@@ -24,7 +24,7 @@ sdk("iphoneos")
 
 clean(true)
 
-silent(true)
+# silent(true)
 
 # suppress_xcode_output()
 
