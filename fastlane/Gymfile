@@ -1,0 +1,79 @@
+# For more information about this configuration visit
+# https://docs.fastlane.tools/actions/gym/#gymfile
+
+# In general, you can use the options available
+# fastlane gym --help
+
+# Remove the # in front of the line to enable the option
+
+# project "HelloTalk_Binary.xcodeproj"
+# project("HelloTalk_Binary.xcodeproj")
+
+# workspace "HelloTalk_Binary.xcworkspace"
+workspace("HelloTalk_Binary.xcworkspace")
+
+# scheme("Example")
+# scheme "HelloTalk_Binary"
+scheme("HelloTalk_Binary")
+
+# configuration "Release"
+configuration("Release")
+
+# sdk("iphoneos9.0")
+sdk("iphoneos")
+
+clean(true)
+
+# silent(true)
+
+# suppress_xcode_output()
+
+buildlog_path("./build/logs")
+
+build_path("./build/build")
+
+archive_path("./build/Archives/archive")
+
+derived_data_path("./build/DerivedData")
+
+output_directory("./build/IPA")
+
+output_name("HelloTalk_Binary.ipa")
+
+result_bundle(true)
+
+# disable_xcpretty()
+
+# xcpretty_utf()
+
+codesigning_identity("iPhone Distribution: HELLOTALK FOREIGN LANGUAGE EXCHANGE LEARNING TALK CHAT APP (65DX3KZRH6)")
+
+# analyze_build_time
+
+include_symbols(false)
+
+include_bitcode(false)
+
+export_method("ad-hoc")
+
+export_team_id("65DX3KZRH6")
+
+# export_options("./ExportOptions.plist")
+
+export_options(
+  compileBitcode: false,
+  stripSwiftSymbols: true,
+  uploadBitcode: false,
+  uploadSymbols: false,
+  thinning: "<thin-for-all-variants>",
+  provisioningProfiles: {
+    "com.helloTalk.helloTalk": "helloTalkDistribution",
+    "com.helloTalk.helloTalk.NotificationServiceExt": "HTNotificationServiceExtAdHoc",
+    "com.helloTalk.helloTalk.NotificationContentExt": "NotificationContentExtAdHoc",
+    "com.helloTalk.helloTalk.IntentsExtension": "IntentExtensionAdHoc",
+    "com.helloTalk.helloTalk.IntentsExtensionUI": "IntentExtensionUIAdHoc"
+  },
+  iCloudContainerEnvironment: "Production"
+)
+
+# skip_profile_detection(true)
