@@ -17,7 +17,7 @@ team_name("HELLOTALK FOREIGN LANGUAGE EXCHANGE LEARNING TALK CHAT APP")
 # Remove the # in the beginning of the line to enable the other options
 
 # keychain_name()
-keychain_password("mn234")
+keychain_password("hellotalk")
 
 readonly(true)
 
